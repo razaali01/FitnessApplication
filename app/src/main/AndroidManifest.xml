@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FitnessApplication">
         <activity
+            android:name=".Goals"
+            android:exported="false" />
+        <activity
+            android:name=".Tracker"
+            android:exported="false" />
+        <activity
+            android:name=".WorkoutRecs"
+            android:exported="false" />
+        <activity
+            android:name=".ProfilePage"
+            android:exported="false" />
+        <activity
             android:name=".HomePage"
             android:exported="false" />
         <activity
