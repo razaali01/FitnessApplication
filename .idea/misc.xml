@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_home_page.xml" value="0.4" />
+        <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_goals.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_home_page.xml" value="0.264" />
         <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_profile_page.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_registration.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_tracker.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_workout_recs.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
