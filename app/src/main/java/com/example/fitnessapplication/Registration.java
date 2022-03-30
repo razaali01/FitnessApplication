@@ -22,7 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Registration extends AppCompatActivity implements View.OnClickListener{
 
     private TextView registerUser;
-    private EditText editTextFullName, editTextAge, editTextEmail, editTextPassword;
+    private EditText editTextFullName, editTextAge, editTextEmail, editTextPassword, editTextGender, editTextAddress;
     private ProgressBar progressBar;
     private FirebaseAuth mAuth;
 
@@ -40,10 +40,10 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
         editTextAge = (EditText) findViewById(R.id.Age);
         editTextEmail = (EditText) findViewById(R.id.Email2);
         editTextPassword = (EditText) findViewById(R.id.Password2);
+        editTextGender = (EditText) findViewById(R.id.Gender);
+        editTextAddress = (EditText) findViewById(R.id.Address);
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar2);
-
-
 
     }
 
@@ -62,6 +62,8 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
         String password = editTextPassword.getText().toString().trim();
         String name = editTextFullName.getText().toString().trim();
         String age = editTextAge.getText().toString().trim();
+        String gender = editTextGender.getText().toString().trim();
+        String address = editTextAddress.getText().toString().trim();
 
         if(name.isEmpty())
         {
@@ -99,6 +101,18 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
             editTextPassword.requestFocus();
             return;
         }
+        if(gender.isEmpty())
+        {
+            editTextGender.setError("Gender is required");
+            editTextGender.requestFocus();
+            return;
+        }
+        if(address.isEmpty())
+        {
+            editTextAddress.setError("Address is required");
+            editTextAddress.requestFocus();
+            return;
+        }
 
         progressBar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(email,password)
@@ -109,7 +123,7 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful())
                         {
-                            User user = new User(name, age, email);
+                            User user = new User(name, age, email, password, gender, address);
 
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
@@ -131,6 +145,8 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
                     }
                 });
         return;
+
+
     }
 
 }
