@@ -142,6 +142,46 @@
             android:layout_marginTop="20dp"
             android:textSize="20sp" />
 
+        <TextView
+            android:id="@+id/numTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/greeting"
+            app:layout_constraintTop_toBottomOf="@+id/age"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/numTitle"
+            app:layout_constraintLeft_toLeftOf="@+id/numTitle"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/addressTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/greeting"
+            app:layout_constraintTop_toBottomOf="@+id/num"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/addressTitle"
+            app:layout_constraintLeft_toLeftOf="@+id/addressTitle"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp" />
+
         <Button
             android:id="@+id/BackProfile"
             android:layout_width="wrap_content"
