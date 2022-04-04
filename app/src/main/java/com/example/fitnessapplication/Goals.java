@@ -42,15 +42,14 @@ public class Goals extends AppCompatActivity implements View.OnClickListener{
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-                /*
-                if(){
-
-                }
-                */
-
                 TextView textView = (TextView) view;
-                textView.setPaintFlags(textView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                if(!textView.getPaint().isStrikeThruText()){
+                    textView.setPaintFlags(textView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                }
+                else{
+                    textView.setPaintFlags(textView.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
+                }
             }
         });
 

@@ -10,8 +10,6 @@
         android:layout_height="match_parent"
         tools:context=".Registration">
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         <EditText
             android:id="@+id/FullName"
             android:layout_width="0dp"
