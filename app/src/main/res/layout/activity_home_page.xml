@@ -14,7 +14,10 @@
         android:text="Workout Recs"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@android:color/holo_blue_dark">
+
+    </Button>
 
     <Button
         android:id="@+id/Goals"
@@ -24,7 +27,10 @@
         android:text="Goals"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@android:color/holo_blue_dark">
+
+    </Button>
 
     <Button
         android:id="@+id/Tracker"
@@ -34,26 +40,41 @@
         android:text="Calorie \n and weight \n tracker"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@android:color/holo_blue_dark">
+
+    </Button>
 
     <Button
         android:id="@+id/ProfilePage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
         android:text="Profile Page"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </Button>
 
     <TextView
         android:id="@+id/Welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
+        android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/Goals"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.441" />
+        app:layout_constraintVertical_bias="0.441"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="bold"
+        >
+
+    </TextView>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
