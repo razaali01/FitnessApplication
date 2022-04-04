@@ -22,7 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Registration extends AppCompatActivity implements View.OnClickListener{
 
     private TextView registerUser;
-    private EditText editTextFullName, editTextAge, editTextEmail, editTextPassword, editTextGender, editTextAddress;
+    private EditText editTextFullName, editTextAge, editTextEmail, editTextPassword, editTextGender, editTextAddress, editTextHeight, editTextNumber;
     private ProgressBar progressBar;
     private FirebaseAuth mAuth;
 
@@ -42,6 +42,8 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
         editTextPassword = (EditText) findViewById(R.id.Password2);
         editTextGender = (EditText) findViewById(R.id.Gender);
         editTextAddress = (EditText) findViewById(R.id.Address);
+        editTextHeight = (EditText) findViewById(R.id.Height);
+        editTextNumber = (EditText) findViewById(R.id.PhoneNumber);
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar2);
 
@@ -64,6 +66,8 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
         String age = editTextAge.getText().toString().trim();
         String gender = editTextGender.getText().toString().trim();
         String address = editTextAddress.getText().toString().trim();
+        String height = editTextHeight.getText().toString().trim();
+        String number = editTextNumber.getText().toString().trim();
 
         if(name.isEmpty())
         {
@@ -83,34 +87,52 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
             editTextEmail.requestFocus();
             return;
         }
-        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches())
-        {
-            editTextEmail.setError("Please provide valid email");
-            editTextEmail.requestFocus();
-            return;
-        }
         if(password.isEmpty())
         {
             editTextPassword.setError("Password is required");
             editTextPassword.requestFocus();
             return;
         }
-        if(password.length() < 6)
-        {
-            editTextPassword.setError("Min password length should be 6 characters!");
-            editTextPassword.requestFocus();
-            return;
-        }
+
         if(gender.isEmpty())
         {
             editTextGender.setError("Gender is required");
             editTextGender.requestFocus();
             return;
         }
+
         if(address.isEmpty())
         {
             editTextAddress.setError("Address is required");
             editTextAddress.requestFocus();
+            return;
+        }
+
+        if(height.isEmpty())
+        {
+            editTextHeight.setError("Height is required");
+            editTextHeight.requestFocus();
+            return;
+        }
+
+        if(number.isEmpty())
+        {
+            editTextNumber.setError("Phone number is required");
+            editTextNumber.requestFocus();
+            return;
+        }
+
+        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches())
+        {
+            editTextEmail.setError("Please provide valid email");
+            editTextEmail.requestFocus();
+            return;
+        }
+
+        if(password.length() < 6)
+        {
+            editTextPassword.setError("Min password length should be 6 characters!");
+            editTextPassword.requestFocus();
             return;
         }
 
@@ -123,7 +145,7 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful())
                         {
-                            User user = new User(name, age, email, password, gender, address);
+                            User user = new User(name, age, email, password, gender, address, height, number);
 
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
@@ -144,7 +166,6 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
                         }
                     }
                 });
-        return;
 
 
     }
