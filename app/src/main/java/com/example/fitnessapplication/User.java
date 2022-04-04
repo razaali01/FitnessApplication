@@ -1,40 +1,24 @@
 package com.example.fitnessapplication;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class User {
 
+    public String fullName, age, email, password, gender, address, height, number;
 
-    private List<String> toDoList;
-    private String fullName, age, email;
-    private String gender, address;
+    public User()
+    {
 
-
-
-    public User() {
     }
 
-
-
-    public User(String fullName, String age, String email)
+    public User(String fullName, String age, String email, String password, String gender, String address, String height, String number)
     {
         this.fullName = fullName;
         this.age = age;
         this.email = email;
-
-        gender = "";
-        address = "";
-
-        toDoList = new ArrayList<>();
-    }
-
-    public  List<String> getToDoList() {
-        return toDoList;
-    }
-
-    public  void setToDoList(List<String> ToDoList) {
-        toDoList = ToDoList;
+        this.password = password;
+        this.gender = gender;
+        this.address = address;
+        this.height = height;
+        this.number = number;
     }
 
     public String getFullName() {
@@ -61,6 +45,14 @@ public class User {
         this.email = email;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public String getGender() {
         return gender;
     }
@@ -77,5 +69,19 @@ public class User {
         this.address = address;
     }
 
+    public String getHeight() {
+        return height;
+    }
 
+    public void setHeight(String height) {
+        this.height = height;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
 }
