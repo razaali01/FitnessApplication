@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,7 +26,7 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
     private DatabaseReference reference;
 
     private String userID;
-    private Button Back, Logout;
+    private Button Back, Logout, Edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,14 +47,14 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
         userID = user.getUid();
 
         final TextView greetingTextView = (TextView) findViewById(R.id.greeting);
-        final TextView fullNameTextView = (TextView) findViewById(R.id.fullName);
-        final TextView emailAddressTextView = (TextView) findViewById(R.id.emailAddress);
-        final TextView passwordTextView = (TextView) findViewById(R.id.password);
-        final TextView genderTextView = (TextView) findViewById(R.id.gender);
-        final TextView heightTextView = (TextView) findViewById(R.id.height);
-        final TextView ageTextView = (TextView) findViewById(R.id.age);
-        final TextView numTextView = (TextView) findViewById(R.id.num);
-        final TextView addressTextView = (TextView) findViewById(R.id.address);
+        final TextView fullNameTextView = (EditText) findViewById(R.id.fullName);
+        final TextView emailAddressTextView = (EditText) findViewById(R.id.emailAddress);
+        final TextView passwordTextView = (EditText) findViewById(R.id.password);
+        final TextView genderTextView = (EditText) findViewById(R.id.gender);
+        final TextView heightTextView = (EditText) findViewById(R.id.height);
+        final TextView ageTextView = (EditText) findViewById(R.id.age);
+        final TextView numTextView = (EditText) findViewById(R.id.num);
+        final TextView addressTextView = (EditText) findViewById(R.id.address);
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -91,6 +92,17 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
 
         Back = (Button) findViewById(R.id.BackProfile);
         Back.setOnClickListener(this);
+
+        Edit = (Button) findViewById(R.id.EditProfile);
+        Edit.setOnClickListener(this);
+
+        showAllUserData();
+
+    }
+
+    private void showAllUserData() {
+        Intent intent = getIntent();
+
     }
 
     @Override
@@ -100,6 +112,7 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
             case(R.id.BackProfile):
                 startActivity(new Intent(this, HomePage.class));
                 break;
+
         }
     }
 }
