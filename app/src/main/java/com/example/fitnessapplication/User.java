@@ -2,7 +2,7 @@ package com.example.fitnessapplication;
 
 public class User {
 
-    public String fullName, age, email, password, gender, address;
+    public String fullName, age, email, password, gender, address, height, number;
 
     public User()
     {
@@ -17,5 +17,7 @@ public class User {
         this.password = password;
         this.gender = gender;
         this.address = address;
+        this.height = height;
+        this.number = number;
     }
 }
