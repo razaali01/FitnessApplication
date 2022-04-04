@@ -57,7 +57,7 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
 
                 if(userProfile != null)
                 {
-                    String fullName = userProfile.fullName;
+                    String fullName = userProfile.getFullName();
 
                     greetingTextView.setText("Welcome, " + fullName + "!!");
                 }

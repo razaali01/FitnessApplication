@@ -1,61 +1,75 @@
 package com.example.fitnessapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class Goals extends AppCompatActivity implements View.OnClickListener{
 
+    List<String> toDoList;
+    ArrayAdapter<String> arrayAdapter;
+    ListView listView;
+    EditText editText;
+
     private Button Back;
-    EditText textIn;
-    Button buttonAdd;
-    LinearLayout container;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goals);
 
-        textIn = (EditText) findViewById(R.id.textin);
-        buttonAdd = (Button) findViewById(R.id.add);
-        container = (LinearLayout)findViewById(R.id.container);
+        toDoList = new ArrayList<>();
+        //toDoList = User.getToDoList();
+
+
+        arrayAdapter = new ArrayAdapter<>(this,R.layout.list_view_layout, toDoList);
+        listView = findViewById(R.id.id_list_view);
+
+        listView.setAdapter(arrayAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                /*
+                if(){
+
+                }
+                */
+
+                TextView textView = (TextView) view;
+                textView.setPaintFlags(textView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            }
+        });
+
+        editText = findViewById(R.id.id_edit_text);
 
         Back = (Button) findViewById(R.id.GoalsBack);
         Back.setOnClickListener(this);
-        buttonAdd.setOnClickListener(new View.OnClickListener(){
+    }
 
-            @Override
-            public void onClick(View arg0) {
-                LayoutInflater layoutInflater =
-                        (LayoutInflater) getBaseContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                final View addView = layoutInflater.inflate(R.layout.row, null);
-                TextView textOut = (TextView)addView.findViewById(R.id.textout);
-                textOut.setText(textIn.getText().toString());
-                Button buttonRemove = (Button) addView.findViewById(R.id.remove);
-                buttonRemove.setOnClickListener(new View.OnClickListener(){
-
-                    @Override
-                    public void onClick(View v) {
-                        ((LinearLayout)addView.getParent()).removeView(addView);
-                    }});
-
-                container.addView(addView);
-            }});
+    public void addItemToList(View view){
+        toDoList.add(editText.getText().toString());
+        //User.setToDoList(toDoList);
+        arrayAdapter.notifyDataSetChanged();
+        editText.setText("");
     }
 
     @Override
     public void onClick(View view) {
-        switch(view.getId())
-        {
+        switch(view.getId()) {
             case(R.id.GoalsBack):
                 startActivity(new Intent(this, HomePage.class));
                 break;
