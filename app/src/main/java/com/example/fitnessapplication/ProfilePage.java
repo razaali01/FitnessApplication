@@ -5,10 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,15 +45,15 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
         reference = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
 
-        final TextView greetingTextView = (TextView) findViewById(R.id.greeting);
-        final TextView fullNameTextView = (EditText) findViewById(R.id.fullName);
-        final TextView emailAddressTextView = (EditText) findViewById(R.id.emailAddress);
-        final TextView passwordTextView = (EditText) findViewById(R.id.password);
-        final TextView genderTextView = (EditText) findViewById(R.id.gender);
-        final TextView heightTextView = (EditText) findViewById(R.id.height);
-        final TextView ageTextView = (EditText) findViewById(R.id.age);
-        final TextView numTextView = (EditText) findViewById(R.id.num);
-        final TextView addressTextView = (EditText) findViewById(R.id.address);
+        final TextView greetingTextView = findViewById(R.id.greeting);
+        final TextView fullNameTextView =  findViewById(R.id.fullName);
+        final TextView emailAddressTextView = findViewById(R.id.emailAddress);
+        final TextView passwordTextView = findViewById(R.id.password);
+        final TextView genderTextView = findViewById(R.id.gender);
+        final TextView heightTextView =  findViewById(R.id.height);
+        final TextView ageTextView = findViewById(R.id.age);
+        final TextView numTextView = findViewById(R.id.num);
+        final TextView addressTextView = findViewById(R.id.address);
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -93,17 +92,13 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
         Back = (Button) findViewById(R.id.BackProfile);
         Back.setOnClickListener(this);
 
-        Edit = (Button) findViewById(R.id.EditProfile);
+        Edit = (Button) findViewById(R.id.edit);
         Edit.setOnClickListener(this);
 
-        showAllUserData();
+
 
     }
 
-    private void showAllUserData() {
-        Intent intent = getIntent();
-
-    }
 
     @Override
     public void onClick(View view) {
@@ -112,7 +107,9 @@ public class ProfilePage extends AppCompatActivity implements View.OnClickListen
             case(R.id.BackProfile):
                 startActivity(new Intent(this, HomePage.class));
                 break;
-
+            case(R.id.edit):
+                startActivity(new Intent(this, EditProfile.class));
+                break;
         }
     }
 }
