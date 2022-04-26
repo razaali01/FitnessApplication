@@ -10,6 +10,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FitnessApplication">
         <activity
+            android:name=".Yoga.YogaAdvanced"
+            android:exported="false" />
+        <activity
+            android:name=".Yoga.YogaIntermediate"
+            android:exported="false" />
+        <activity
+            android:name=".Yoga.YogaBeginner"
+            android:exported="false" />
+        <activity
+            android:name=".StrengthTraining.MuscleGroupArms"
+            android:exported="false" />
+        <activity
+            android:name=".StrengthTraining.MuscleGroupLegs"
+            android:exported="false" />
+        <activity
+            android:name=".StrengthTraining.MuscleGroupShoulder"
+            android:exported="false" />
+        <activity
+            android:name=".StrengthTraining.MuscleGroupBack"
+            android:exported="false" />
+        <activity
+            android:name=".StrengthTraining.MuscleGroupChest"
+            android:exported="false" />
+        <activity
+            android:name=".Cardio.WorkoutCardioGroups"
+            android:exported="false" />
+        <activity
+            android:name=".Yoga.WorkoutYogaGroup"
+            android:exported="false" />
+        <activity
+            android:name=".StrengthTraining.WorkoutStrengthGroup"
+            android:exported="false" />
+        <activity
             android:name=".EditProfile"
             android:exported="false" />
         <activity
