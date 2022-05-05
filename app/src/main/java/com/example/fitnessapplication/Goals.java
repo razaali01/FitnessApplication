@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Goals extends AppCompatActivity implements View.OnClickListener{
+public class  Goals extends AppCompatActivity implements View.OnClickListener{
 
     List<String> toDoList;
     ArrayAdapter<String> arrayAdapter;

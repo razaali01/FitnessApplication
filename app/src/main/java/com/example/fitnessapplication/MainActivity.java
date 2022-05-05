@@ -20,13 +20,13 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
+
     private TextView register;
     private EditText editTextEmail, editTextPassword;
     private Button signIn;
 
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mAuth = FirebaseAuth.getInstance();
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
+
     }
 
     @Override
