@@ -8,57 +8,60 @@
 
     <EditText
         android:id="@+id/TrackerCalorieDateInput"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="100dp"
         android:ems="10"
-        android:inputType="date"
         android:hint="Enter Date"
-        app:layout_constraintBottom_toTopOf="@+id/TrackerCalorieAddWeight"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/TrackerCalorieCalorieInput"
-        android:layout_width="175dp"
+        android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="50dp"
         android:ems="10"
-        android:inputType="numberDecimal"
         android:hint="Enter Calories"
-        app:layout_constraintBottom_toTopOf="@+id/TrackerCalorieAddWeight"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/TrackerCalorieDateInput" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TrackerCalorieDateInput" />
 
     <Button
         android:id="@+id/TrackerCalorieAddWeight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
         android:text="Add"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TrackerCalorieBack" />
 
     <Button
         android:id="@+id/TrackerCalorieView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
         android:text="View"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TrackerCalorieCalorieInput" />
 
     <Button
         android:id="@+id/TrackerCalorieBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
         android:text="Back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/TrackerCalorieAddWeight"
-        app:layout_constraintStart_toEndOf="@+id/TrackerCalorieView" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TrackerCalorieView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

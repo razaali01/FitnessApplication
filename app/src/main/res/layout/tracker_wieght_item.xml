@@ -24,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Date :"
-                android:textColor="@color/black"
+                android:textColor = "@android:color/holo_blue_dark"
                 android:textSize="26sp"
                 android:textStyle="bold"/>
             <TextView
@@ -48,9 +48,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Weight :"
-                android:textColor="@color/black"
+                android:textColor="@android:color/holo_blue_dark"
                 android:textSize="26sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

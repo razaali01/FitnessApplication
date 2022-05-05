@@ -11,6 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:textColor="@android:color/holo_blue_dark"
+
         android:textStyle="bold"
         android:textSize="25dp"
         android:text="Make a Selection for Muscle Group"
@@ -24,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="Chest"
+        android:backgroundTint="@android:color/holo_blue_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,6 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="Back"
+        android:backgroundTint="@android:color/holo_blue_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Shoulder" />
@@ -45,6 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="Shoulder"
+        android:backgroundTint="@android:color/holo_blue_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Arms" />
@@ -55,6 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="Arms"
+        android:backgroundTint="@android:color/holo_blue_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Chest" />
@@ -65,8 +71,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="Legs"
+        android:backgroundTint="@android:color/holo_blue_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Back" />
+
+    <Button
+        android:id="@+id/MuscleGroupBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="Back"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

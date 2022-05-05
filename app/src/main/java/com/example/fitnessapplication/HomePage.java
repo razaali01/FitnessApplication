@@ -55,7 +55,7 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
 
         final TextView greetingTextView = (TextView) findViewById(R.id.Welcome);
 
-        TextUserId = (TextView) findViewById(R.id.Userid);
+
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -67,8 +67,6 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
                     String fullName = userProfile.getFullName();
 
                     greetingTextView.setText("Welcome, " + fullName + "!!");
-
-                    TextUserId.setText(userID);
                 }
             }
 

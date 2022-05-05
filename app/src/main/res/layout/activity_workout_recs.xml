@@ -14,6 +14,7 @@
         android:textSize="25dp"
         android:textStyle="bold"
         android:text="Select your Workout Type"
+        android:textColor="@android:color/holo_blue_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,6 +26,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:text="Back"
+        android:backgroundTint="@android:color/holo_blue_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -34,6 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="Yoga"
+        android:backgroundTint="@android:color/holo_blue_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Weights" />
@@ -44,6 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="Cardio"
+        android:backgroundTint="@android:color/holo_blue_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Yoga" />
@@ -54,6 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="125dp"
         android:text="Weights"
+        android:backgroundTint="@android:color/holo_blue_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SelectWorkoutType" />

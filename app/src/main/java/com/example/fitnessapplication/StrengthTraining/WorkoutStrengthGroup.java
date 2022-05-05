@@ -8,10 +8,11 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.fitnessapplication.R;
+import com.example.fitnessapplication.WorkoutRecs;
 
 public class WorkoutStrengthGroup extends AppCompatActivity implements View.OnClickListener {
 
-    private Button Chest, Back, Shoulder, Arms, Legs;
+    private Button Chest, Back, Shoulder, Arms, Legs, Backk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,9 @@ public class WorkoutStrengthGroup extends AppCompatActivity implements View.OnCl
 
         Legs = (Button) findViewById(R.id.Legs);
         Legs.setOnClickListener(this);
+
+        Backk = (Button) findViewById(R.id.MuscleGroupBack);
+        Backk.setOnClickListener(this);
     }
 
     @Override
@@ -51,6 +55,9 @@ public class WorkoutStrengthGroup extends AppCompatActivity implements View.OnCl
                 break;
             case(R.id.Legs):
                 startActivity(new Intent(this,MuscleGroupLegs.class));
+                break;
+            case(R.id.MuscleGroupBack):
+                startActivity(new Intent(this, WorkoutRecs.class));
                 break;
         }
     }
