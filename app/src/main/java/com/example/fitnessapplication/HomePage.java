@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.fitnessapplication.Tracker.TrackerMain;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -18,11 +19,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import org.w3c.dom.Text;
+
 public class HomePage extends AppCompatActivity implements View.OnClickListener{
 
     private FirebaseUser user;
     private DatabaseReference reference;
     private String userID;
+
+    private TextView TextUserId;
 
     private Button Goals, WorkoutRecs, Tracker, ProfilePage;
 
@@ -50,6 +55,8 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
 
         final TextView greetingTextView = (TextView) findViewById(R.id.Welcome);
 
+        TextUserId = (TextView) findViewById(R.id.Userid);
+
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -60,6 +67,8 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
                     String fullName = userProfile.getFullName();
 
                     greetingTextView.setText("Welcome, " + fullName + "!!");
+
+                    TextUserId.setText(userID);
                 }
             }
 
@@ -81,7 +90,7 @@ public class HomePage extends AppCompatActivity implements View.OnClickListener{
                 startActivity(new Intent(this, WorkoutRecs.class));
                 break;
             case(R.id.Tracker):
-                startActivity(new Intent(this, Tracker.class));
+                startActivity(new Intent(this, TrackerMain.class));
                 break;
             case(R.id.ProfilePage):
                 startActivity(new Intent(this, ProfilePage.class));

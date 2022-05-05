@@ -9,6 +9,7 @@
         <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1885" />
         <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/drawable/logo.xml" value="0.1" />
         <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_add_new_task.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_calorie_tracker_main.xml" value="0.203125" />
         <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_cardio_advanced.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_cardio_beginner.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_cardio_intermediate.xml" value="0.35260416666666666" />
@@ -30,7 +31,12 @@
         <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_splash.xml" value="0.264" />
         <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_strength_selected.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_tracker.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_tracker_calorie_view.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_tracker_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_tracker_weight_details.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_tracker_weight_view.xml" value="0.264" />
         <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_view_courses.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_weight_tracker_main.xml" value="0.264" />
         <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_workout_cardio_groups.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_workout_displayer.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_workout_recs.xml" value="0.2" />
@@ -42,10 +48,13 @@
         <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_yoga_advanced.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_yoga_beginner.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/activity_yoga_intermediate.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/course_item.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/course_rv_item.xml" value="0.13796296296296295" />
         <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/list_view_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/row.xml" value="0.264" />
         <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/rwo.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/tracker_calorie_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/20raz/AndroidStudioProjects/FitnessApplication/app/src/main/res/layout/tracker_wieght_item.xml" value="0.203125" />
       </map>
     </option>
   </component>
