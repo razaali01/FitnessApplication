@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FitnessApplication">
         <activity
+            android:name=".Cardio.CardioAdvanced"
+            android:exported="false" />
+        <activity
+            android:name=".Cardio.CardioIntermediate"
+            android:exported="false" />
+        <activity
+            android:name=".Cardio.CardioBeginner"
+            android:exported="false" />
+        <activity
             android:name=".Yoga.YogaAdvanced"
             android:exported="false" />
         <activity

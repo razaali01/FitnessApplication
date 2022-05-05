@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.fitnessapplication.R;
+import com.example.fitnessapplication.WorkoutRecs;
 
 public class WorkoutYogaGroup extends AppCompatActivity implements View.OnClickListener {
 
@@ -45,7 +46,7 @@ public class WorkoutYogaGroup extends AppCompatActivity implements View.OnClickL
                 startActivity(new Intent(this, YogaAdvanced.class));
                 break;
             case(R.id.YogaBack):
-                startActivity(new Intent(this, WorkoutYogaGroup.class));
+                startActivity(new Intent(this, WorkoutRecs.class));
                 break;
         }
     }
